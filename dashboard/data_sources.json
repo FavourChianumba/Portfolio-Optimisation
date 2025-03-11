@@ -1,0 +1,82 @@
+{
+    "portfolio_weights": {
+        "file": "portfolio_weights.csv",
+        "description": "Portfolio Weights",
+        "created": "2025-03-10 14:33:11"
+    },
+    "volatility_metrics_viz": {
+        "file": "volatility_metrics_viz.csv",
+        "description": "Volatility Metrics Viz",
+        "created": "2025-03-10 14:33:11"
+    },
+    "backtest_drawdowns": {
+        "file": "backtest_drawdowns.csv",
+        "description": "Backtest Drawdowns",
+        "created": "2025-03-10 14:33:11"
+    },
+    "key_metrics_dashboard": {
+        "file": "key_metrics_dashboard.csv",
+        "description": "Key Metrics Dashboard",
+        "created": "2025-03-10 14:33:13"
+    },
+    "efficient_frontier_viz": {
+        "file": "efficient_frontier_viz.csv",
+        "description": "Efficient Frontier Viz",
+        "created": "2025-03-10 14:33:11"
+    },
+    "backtest_values": {
+        "file": "backtest_values.csv",
+        "description": "Backtest Values",
+        "created": "2025-03-10 14:33:11"
+    },
+    "correlation_heatmap": {
+        "file": "correlation_heatmap.csv",
+        "description": "Correlation Heatmap",
+        "created": "2025-03-10 14:33:11"
+    },
+    "max_drawdowns": {
+        "file": "max_drawdowns.csv",
+        "description": "Max Drawdowns",
+        "created": "2025-03-10 14:33:13"
+    },
+    "monte_carlo_distributions": {
+        "file": "monte_carlo_distributions.csv",
+        "description": "Monte Carlo Distributions",
+        "created": "2025-03-10 14:33:15"
+    },
+    "optimal_portfolios": {
+        "file": "optimal_portfolios.csv",
+        "description": "Optimal Portfolios",
+        "created": "2025-03-10 14:33:10"
+    },
+    "stress_test_summary": {
+        "file": "stress_test_summary.csv",
+        "description": "Stress Test Summary",
+        "created": "2025-03-10 14:33:15"
+    },
+    "tail_risk_metrics_viz": {
+        "file": "tail_risk_metrics_viz.csv",
+        "description": "Tail Risk Metrics Viz",
+        "created": "2025-03-10 14:33:11"
+    },
+    "backtest_growth": {
+        "file": "backtest_growth.csv",
+        "description": "Backtest Growth",
+        "created": "2025-03-10 14:33:11"
+    },
+    "monte_carlo_stats": {
+        "file": "monte_carlo_stats.csv",
+        "description": "Monte Carlo Stats",
+        "created": "2025-03-10 14:33:14"
+    },
+    "monte_carlo_percentiles": {
+        "file": "monte_carlo_percentiles.csv",
+        "description": "Monte Carlo Percentiles",
+        "created": "2025-03-10 14:33:14"
+    },
+    "backtest_performance": {
+        "file": "backtest_performance.csv",
+        "description": "Backtest Performance",
+        "created": "2025-03-10 14:33:11"
+    }
+}

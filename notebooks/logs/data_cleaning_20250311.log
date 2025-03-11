@@ -1,0 +1,22 @@
+2025-03-11 16:28:57,817 - src.data_cleaning - INFO - Starting asset data cleaning...
+2025-03-11 16:28:57,843 - src.data_cleaning - INFO - Missing values before cleaning: count    9.0
+mean     0.0
+std      0.0
+min      0.0
+25%      0.0
+50%      0.0
+75%      0.0
+max      0.0
+dtype: float64
+2025-03-11 16:28:58,996 - src.data_cleaning - WARNING - Index is not a DatetimeIndex, attempting to convert
+2025-03-11 16:28:59,133 - src.data_cleaning - INFO - Saved cleaned asset prices to /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed/cleaned_asset_prices.csv
+2025-03-11 16:28:59,216 - src.data_cleaning - INFO - Saved daily returns to /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed/daily_returns.csv
+2025-03-11 16:29:00,289 - src.data_cleaning - INFO - Saved monthly returns to /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed/monthly_returns.csv
+2025-03-11 16:29:00,290 - src.data_cleaning - INFO - Asset data cleaning completed. Files saved to: /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed
+2025-03-11 16:29:00,291 - src.data_cleaning - INFO - Starting macro data cleaning...
+2025-03-11 16:29:00,293 - src.data_cleaning - INFO - Loading FRED macro data from /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/raw/fred_macro.csv
+2025-03-11 16:29:00,333 - src.data_cleaning - INFO - Loading Yahoo macro data from /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/raw/yahoo_macro.csv
+2025-03-11 16:29:00,355 - src.data_cleaning - INFO - Combining FRED and Yahoo macro data
+2025-03-11 16:29:02,244 - src.data_cleaning - INFO - Saved cleaned macro data to /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed/cleaned_macro.csv
+2025-03-11 16:29:02,783 - src.data_cleaning - INFO - Saved macro changes to /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed/macro_changes.csv
+2025-03-11 16:29:02,784 - src.data_cleaning - INFO - Macro data cleaning completed. Files saved to: /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/processed

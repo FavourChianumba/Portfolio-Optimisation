@@ -1,0 +1,16 @@
+2025-03-10 21:35:08,826 - src.factor_optimization - INFO - Loading pre-computed factor returns
+2025-03-10 21:35:08,876 - src.factor_optimization - INFO - Estimating factor model parameters
+2025-03-10 21:35:08,895 - src.factor_optimization - ERROR - Error estimating factor model: No overlapping data between returns and factors
+Traceback (most recent call last):
+  File "/Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/src/factor_optimization.py", line 132, in _estimate_factor_model
+    raise ValueError("No overlapping data between returns and factors")
+ValueError: No overlapping data between returns and factors
+2025-03-10 22:17:54,543 - src.factor_optimization - INFO - Loading pre-computed factor returns
+2025-03-10 22:17:54,581 - src.factor_optimization - WARNING - Loaded factor returns have insufficient date overlap with asset returns
+2025-03-10 22:17:54,585 - src.factor_optimization - INFO - Generating basic factor returns
+2025-03-10 22:17:55,153 - src.factor_optimization - INFO - Estimating factor model parameters
+2025-03-10 22:17:55,195 - src.factor_optimization - INFO - Factor model estimated for 9 assets
+2025-03-10 22:19:02,354 - src.factor_optimization - INFO - Optimizing factor-based portfolio with objective: sharpe
+2025-03-10 22:19:03,511 - src.factor_optimization - INFO - Factor portfolio optimization completed. Return: 0.3242, Volatility: 0.1417, Sharpe: 2.0411
+2025-03-10 22:19:04,205 - src.factor_optimization - INFO - Optimizing factor-tilted portfolio with max_return objective
+2025-03-10 22:19:04,462 - src.factor_optimization - INFO - Factor-tilted portfolio optimization completed.

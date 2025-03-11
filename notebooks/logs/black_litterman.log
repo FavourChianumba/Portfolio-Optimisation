@@ -1,0 +1,23 @@
+2025-03-10 22:19:05,715 - src.black_litterman - INFO - Estimating market weights (equal weight)
+2025-03-10 22:19:05,720 - src.black_litterman - INFO - Calculating covariance matrix
+2025-03-10 22:19:05,724 - src.black_litterman - INFO - Calculating equilibrium returns
+2025-03-10 22:19:05,804 - src.black_litterman - INFO - Added absolute view: AMZN return = 15.00% (confidence: 0.70)
+2025-03-10 22:19:05,812 - src.black_litterman - INFO - Added relative view: QQQ - MSFT = 5.00% (confidence: 0.60)
+2025-03-10 22:19:05,820 - src.black_litterman - INFO - Computing Black-Litterman posterior estimates
+2025-03-10 22:19:05,849 - src.black_litterman - INFO - Black-Litterman posterior estimates computed successfully
+2025-03-10 22:19:05,897 - src.black_litterman - INFO - Comparing prior and posterior estimates
+2025-03-10 22:19:05,922 - src.black_litterman - INFO - Assets with largest increases in expected returns:
+2025-03-10 22:19:05,927 - src.black_litterman - INFO -   AMZN: 0.0314 -> 0.0748 (138.23%)
+2025-03-10 22:19:05,929 - src.black_litterman - INFO -   QQQ: 0.0148 -> 0.0214 (45.35%)
+2025-03-10 22:19:05,932 - src.black_litterman - INFO -   SPY: 0.0214 -> 0.0234 (9.54%)
+2025-03-10 22:19:05,935 - src.black_litterman - INFO -   TLT: 0.0196 -> 0.0215 (9.75%)
+2025-03-10 22:19:05,937 - src.black_litterman - INFO -   JPM: 0.0198 -> 0.0200 (1.15%)
+2025-03-10 22:19:05,939 - src.black_litterman - INFO - Assets with largest decreases in expected returns:
+2025-03-10 22:19:05,943 - src.black_litterman - INFO -   MSFT: 0.0084 -> 0.0041 (-51.44%)
+2025-03-10 22:19:05,945 - src.black_litterman - INFO -   AAPL: 0.0355 -> 0.0340 (-4.12%)
+2025-03-10 22:19:05,947 - src.black_litterman - INFO -   GLD: 0.0205 -> 0.0196 (-4.70%)
+2025-03-10 22:19:05,950 - src.black_litterman - INFO -   XOM: 0.0256 -> 0.0248 (-3.25%)
+2025-03-10 22:19:05,953 - src.black_litterman - INFO -   JPM: 0.0198 -> 0.0200 (1.15%)
+2025-03-10 22:19:05,964 - src.black_litterman - INFO - Comparison of prior and posterior estimates completed
+2025-03-10 22:19:06,070 - src.black_litterman - INFO - Optimizing Black-Litterman portfolio with sharpe objective
+2025-03-10 22:19:06,235 - src.black_litterman - INFO - Black-Litterman optimization completed. Return: 0.0458, Volatility: 0.0221, Sharpe: 0.4895

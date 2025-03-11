@@ -1,0 +1,3 @@
+Scenario,Initial Value,Final Value,Total Return,Max Drawdown,Duration (Days)
+Custom Bearish Scenario,100000.0,46622.56101978211,-0.533774389802179,-0.5242595814307948,25
+Custom Volatile Scenario,100000.0,115307.8287366609,0.153078287366609,-0.26257587310507163,45

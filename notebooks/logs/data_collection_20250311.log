@@ -1,0 +1,26 @@
+2025-03-11 16:28:34,476 - src.data_collection - INFO - Starting data collection...
+2025-03-11 16:28:35,065 - src.data_collection - INFO - Attempting to download asset data from Yahoo Finance (yahooquery)...
+2025-03-11 16:28:46,927 - src.data_collection - INFO - Successfully downloaded data for SPY
+2025-03-11 16:28:46,932 - src.data_collection - INFO - Successfully downloaded data for QQQ
+2025-03-11 16:28:46,937 - src.data_collection - INFO - Successfully downloaded data for TLT
+2025-03-11 16:28:46,977 - src.data_collection - INFO - Successfully downloaded data for GLD
+2025-03-11 16:28:46,991 - src.data_collection - INFO - Successfully downloaded data for AAPL
+2025-03-11 16:28:46,997 - src.data_collection - INFO - Successfully downloaded data for MSFT
+2025-03-11 16:28:47,011 - src.data_collection - INFO - Successfully downloaded data for AMZN
+2025-03-11 16:28:47,022 - src.data_collection - INFO - Successfully downloaded data for JPM
+2025-03-11 16:28:47,028 - src.data_collection - INFO - Successfully downloaded data for XOM
+2025-03-11 16:28:47,557 - src.data_collection - INFO - Successfully fetched asset data from Yahoo Finance
+2025-03-11 16:28:47,559 - src.data_collection - INFO - Attempting to download macro data from FRED...
+2025-03-11 16:28:49,470 - src.data_collection - INFO - Successfully downloaded CPIAUCSL from FRED
+2025-03-11 16:28:49,742 - src.data_collection - INFO - Successfully downloaded UNRATE from FRED
+2025-03-11 16:28:50,032 - src.data_collection - INFO - Successfully downloaded FEDFUNDS from FRED
+2025-03-11 16:28:50,718 - src.data_collection - INFO - Successfully downloaded T10Y2Y from FRED
+2025-03-11 16:28:51,301 - src.data_collection - INFO - Successfully downloaded BAMLH0A0HYM2 from FRED
+2025-03-11 16:28:51,302 - src.data_collection - INFO - Attempting to download macro indicators from Yahoo Finance (yahooquery)...
+2025-03-11 16:28:55,236 - src.data_collection - INFO - Successfully downloaded ^VIX
+2025-03-11 16:28:55,242 - src.data_collection - INFO - Successfully downloaded ^TNX
+2025-03-11 16:28:55,244 - src.data_collection - INFO - Successfully downloaded ^TYX
+2025-03-11 16:28:55,248 - src.data_collection - INFO - Successfully downloaded ^DJI
+2025-03-11 16:28:55,255 - src.data_collection - INFO - Successfully fetched macro indicators from Yahoo Finance
+2025-03-11 16:28:55,260 - src.data_collection - INFO - Successfully fetched macro indicators from Yahoo Finance
+2025-03-11 16:28:55,444 - src.data_collection - INFO - Data collection completed. Files saved to: /Users/favourchianumba/Desktop/code_projects/data science/portfolio-optimization/data/raw

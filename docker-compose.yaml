@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: portfolio-optimization
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./dashboard:/app/dashboard
+    env_file:
+      - .env
+    command: python main.py
+    # Uncomment to run with an interactive shell
+    # command: bash
+    # stdin_open: true
+    # tty: true
+
+  tableau-server:
+    image: tfoldi/tableau-server:2022.1
+    container_name: tableau-server
+    ports:
+      - "8850:8850"
+      - "80:80"
+    volumes:
+      - ./dashboard:/var/opt/tableau/tableau_server/data/tabsvc/files/extracts
+    environment:
+      - TABLEAU_USERNAME=admin
+      - TABLEAU_PASSWORD=password123
+    depends_on:
+      - app
+    deploy:
+      resources:
+        limits:
+          memory: 16G
+    # Optional: uncomment for Tableau Server
+    # Comment out if you just want to use Tableau Desktop
+    profiles:
+      - tableau-server

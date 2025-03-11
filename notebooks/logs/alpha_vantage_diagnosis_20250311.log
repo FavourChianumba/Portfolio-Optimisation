@@ -1,0 +1,13 @@
+2025-03-11 16:53:37,969 - alpha_vantage_diagnosis - INFO - Using Alpha Vantage API key: H75X...5PDI
+2025-03-11 16:53:37,979 - alpha_vantage_diagnosis - INFO - Validating API key...
+2025-03-11 16:53:38,416 - alpha_vantage_diagnosis - INFO - API key appears to be valid
+2025-03-11 16:53:38,449 - alpha_vantage_diagnosis - INFO - Running detailed diagnostics for ticker: AAPL
+2025-03-11 16:53:38,450 - alpha_vantage_diagnosis - INFO - Sending request to URL: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=AAPL&apikey=***&outputsize=compact
+2025-03-11 16:53:39,687 - alpha_vantage_diagnosis - INFO - Response status code: 200
+2025-03-11 16:53:39,693 - alpha_vantage_diagnosis - INFO - Response keys: ['Information']
+2025-03-11 16:53:39,701 - alpha_vantage_diagnosis - INFO - Raw response: {
+  "Information": "Thank you for using Alpha Vantage! This is a premium endpoint. You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly unlock all premium endpoints"
+}
+2025-03-11 16:53:39,717 - alpha_vantage_diagnosis - WARNING - Information message: Thank you for using Alpha Vantage! This is a premium endpoint. You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly unlock all premium endpoints
+2025-03-11 16:53:39,753 - alpha_vantage_diagnosis - ERROR - Basic AAPL test failed. Likely a general API access issue.
+2025-03-11 16:53:39,783 - alpha_vantage_diagnosis - INFO - Completing Alpha Vantage diagnostics
