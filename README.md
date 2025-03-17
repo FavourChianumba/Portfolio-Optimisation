@@ -2,8 +2,6 @@
 
 A comprehensive toolkit for portfolio optimization using Modern Portfolio Theory and advanced financial techniques. This system offers end-to-end functionality from data collection to interactive visualization, helping you create optimized investment portfolios with rigorous risk management.
 
-![Portfolio Optimization](https://via.placeholder.com/800x400.png?text=Portfolio+Optimization+Dashboard)
-
 ## Table of Contents
 
 - [Features](#features)
