@@ -263,6 +263,10 @@ def load_data():
     data = {}
     debug_info = {}
     
+    # Create necessary directories if they don't exist
+    for directory in [data_processed_dir, optimization_dir, risk_dir, monte_carlo_dir, backtest_dir]:
+        directory.mkdir(parents=True, exist_ok=True)
+    
     if DEBUG_MODE:
         # Display path information for debugging
         debug_info["project_root"] = str(project_root)
@@ -285,6 +289,80 @@ def load_data():
             debug_info["returns_path"] = str(returns_path)
             debug_info["prices_path"] = str(prices_path)
         
+        # If the processed files don't exist, try to create them from raw data
+        if not returns_path.exists() or not prices_path.exists():
+            try:
+                # Check if raw data exists
+                raw_asset_path = project_root / "data" / "raw" / "asset_prices.csv"
+                
+                if raw_asset_path.exists():
+                    # Load raw data
+                    st.info("Processing raw data...")
+                    raw_asset_data = pd.read_csv(raw_asset_path, index_col=0, parse_dates=True)
+                    
+                    # Process raw data
+                    raw_asset_data.index = pd.to_datetime(raw_asset_data.index)
+                    raw_asset_data = raw_asset_data.sort_index()
+                    
+                    # Calculate daily returns
+                    daily_returns = raw_asset_data.pct_change().dropna()
+                    
+                    # Save processed data
+                    raw_asset_data.to_csv(prices_path)
+                    daily_returns.to_csv(returns_path)
+                    
+                    st.success("Data processed successfully!")
+                    
+                    # Use the processed data
+                    data['returns'] = daily_returns
+                    data['prices'] = raw_asset_data
+                    
+                    if DEBUG_MODE:
+                        debug_info["data_processing"] = "Raw data processed successfully"
+                else:
+                    # Try to collect data
+                    try:
+                        sys.path.append(str(project_root))
+                        from src.data_collection import collect_data
+                        
+                        st.info("Collecting data from sources...")
+                        asset_data, fred_data, yahoo_macro = collect_data()
+                        
+                        if asset_data is not None:
+                            # Process and save the data
+                            asset_data.index = pd.to_datetime(asset_data.index)
+                            asset_data = asset_data.sort_index()
+                            
+                            # Calculate daily returns
+                            daily_returns = asset_data.pct_change().dropna()
+                            
+                            # Save processed data
+                            asset_data.to_csv(prices_path)
+                            daily_returns.to_csv(returns_path)
+                            
+                            st.success("Data collected and processed successfully!")
+                            
+                            # Use the processed data
+                            data['returns'] = daily_returns
+                            data['prices'] = asset_data
+                            
+                            if DEBUG_MODE:
+                                debug_info["data_collection"] = "Data collected successfully"
+                        else:
+                            if DEBUG_MODE:
+                                debug_info["data_collection_error"] = "No data returned from collect_data()"
+                    except Exception as e:
+                        if DEBUG_MODE:
+                            debug_info["data_collection_error"] = str(e)
+                        else:
+                            st.error(f"Error collecting data: {str(e)}")
+            except Exception as e:
+                if DEBUG_MODE:
+                    debug_info["data_processing_error"] = str(e)
+                else:
+                    st.error(f"Error processing raw data: {str(e)}")
+        
+        # Continue with normal path checking
         if not returns_path.exists():
             # Try alternative locations
             alt_paths = [
@@ -314,14 +392,14 @@ def load_data():
                     break
         
         # Load the data if files exist
-        if returns_path.exists() and prices_path.exists():
+        if returns_path.exists() and prices_path.exists() and 'returns' not in data:
             data['returns'] = pd.read_csv(returns_path, index_col=0, parse_dates=True)
             data['prices'] = pd.read_csv(prices_path, index_col=0, parse_dates=True)
             
             if DEBUG_MODE:
                 debug_info["returns_shape"] = data['returns'].shape
                 debug_info["prices_shape"] = data['prices'].shape
-        else:
+        elif 'returns' not in data:
             if DEBUG_MODE:
                 debug_info["data_load_error"] = "Returns or prices files not found"
             else:
