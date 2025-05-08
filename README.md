@@ -2,6 +2,8 @@
 
 A comprehensive toolkit for portfolio optimization using Modern Portfolio Theory and advanced financial techniques. This system offers end-to-end functionality from data collection to interactive visualization, helping you create optimized investment portfolios with rigorous risk management.
 
+**Live Demo**: Explore the interactive Streamlit dashboard at [https://portfolio-optimisation-dash.streamlit.app/](https://portfolio-optimisation-dash.streamlit.app/)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -27,6 +29,7 @@ A comprehensive toolkit for portfolio optimization using Modern Portfolio Theory
 - **Monte Carlo Simulation** - Future performance projections with multiple simulation techniques
 - **Backtesting Engine** - Historical performance analysis with various allocation strategies
 - **Macro Factor Overlays** - Dynamic allocations based on economic conditions
+- **Interactive Dashboard** - Live Streamlit app for exploring optimization results
 - **Tableau Integration** - Data preparation for interactive dashboards
 - **Modular Architecture** - Easily extensible to add new assets, strategies, or metrics
 - **Robust Fallbacks** - Automatic generation of synthetic data when APIs fail
@@ -96,7 +99,7 @@ A comprehensive toolkit for portfolio optimization using Modern Portfolio Theory
    python main.py
    ```
 
-7. Explore the results in the `dashboard/` directory
+7. Explore the results in the `dashboard/` directory or visit the [Streamlit App](https://portfolio-optimisation-dash.streamlit.app/)
 
 ## Detailed Setup Instructions
 
@@ -187,6 +190,9 @@ python -m src.backtesting
 
 # Dashboard Generation only
 python -m src.dashboard
+
+# Streamlit App (local)
+streamlit run src.streamlit_dashboard.py
 ```
 
 ### Interactive Exploration with Jupyter Notebook
@@ -665,6 +671,21 @@ Log files are stored in the `logs/` directory:
 
 ## Visualization and Dashboards
 
+### Streamlit Interactive Dashboard
+
+Experience the portfolio optimization results through our interactive Streamlit dashboard:
+
+- **Live Demo**: [https://portfolio-optimisation-dash.streamlit.app/](https://portfolio-optimisation-dash.streamlit.app/)
+- Features interactive portfolio customization, efficient frontier visualization, and performance analysis
+- Compare different optimization strategies side-by-side
+- Analyze risk metrics and asset allocations in real-time
+
+To run the Streamlit app locally:
+
+```bash
+streamlit run src.streamlit_dashboard.py
+```
+
 ### Built-in Visualizations
 
 Basic visualizations are automatically generated in the `dashboard/` directory:
@@ -834,6 +855,7 @@ If you encounter issues:
 2. Review the error messages in the console output
 3. Ensure your environment variables are correctly set
 4. Try running individual components to isolate the issue
+5. Explore the live Streamlit demo for reference: [https://portfolio-optimisation-dash.streamlit.app/](https://portfolio-optimisation-dash.streamlit.app/)
 
 ## License
 
